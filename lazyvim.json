@@ -9,7 +9,6 @@
     "lazyvim.plugins.extras.editor.dial",
     "lazyvim.plugins.extras.editor.leap",
     "lazyvim.plugins.extras.editor.mini-diff",
-    "lazyvim.plugins.extras.editor.mini-files",
     "lazyvim.plugins.extras.editor.refactoring",
     "lazyvim.plugins.extras.editor.trouble-v3",
     "lazyvim.plugins.extras.formatting.black",
@@ -18,7 +17,6 @@
     "lazyvim.plugins.extras.lang.json",
     "lazyvim.plugins.extras.lang.markdown",
     "lazyvim.plugins.extras.lang.typescript",
-    "lazyvim.plugins.extras.lazyrc",
     "lazyvim.plugins.extras.linting.eslint",
     "lazyvim.plugins.extras.lsp.none-ls",
     "lazyvim.plugins.extras.test.core",
@@ -32,5 +30,5 @@
   "news": {
     "NEWS.md": "4964"
   },
-  "version": 4
+  "version": 5
 }

@@ -24,3 +24,6 @@ set("n", "<A-6>", ":BufferLineGoToBuffer 6<CR>", { noremap = true, silent = true
 set("n", "<A-7>", ":BufferLineGoToBuffer 7<CR>", { noremap = true, silent = true })
 set("n", "<A-8>", ":BufferLineGoToBuffer 8<CR>", { noremap = true, silent = true })
 set("n", "<A-9>", ":BufferLineGoToBuffer 9<CR>", { noremap = true, silent = true })
+
+set("", "<S-Down>", "<Down>")
+set("", "<S-Up>", "<Up>")

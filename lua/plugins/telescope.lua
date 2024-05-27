@@ -48,7 +48,7 @@ return {
       function()
         require("telescope.builtin").lsp_dynamic_workspace_symbols()
       end,
-      desc = "Goto Symbol (Workspace)",
+      desc = "Goto Symbol (Dynamic Workspace)",
     },
     {
       "<leader>sS",
@@ -66,12 +66,20 @@ return {
       end,
       desc = "Search Document Symbols",
     },
+    {
+      "<leader>se",
+      function()
+        require("telescope.builtin").diagnostics({ severity = "Error" })
+      end,
+      desc = "Search Document Symbols",
+    },
   },
 }
 
 -- kinds
 --
--- Array         = " ",
+-- Array         = " "
+-- ,
 -- Boolean       = "󰨙 ",
 -- Class         = " ",
 -- Codeium       = "󰘦 ",
