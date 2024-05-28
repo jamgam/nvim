@@ -6,8 +6,8 @@ local del = vim.keymap.del
 
 set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
-set("n", "<C-d>", "10j", { noremap = true, silent = true })
-set("n", "<C-u>", "10k", { noremap = true, silent = true })
+set("n", "<C-d>", "15j", { noremap = true, silent = true })
+set("n", "<C-u>", "15k", { noremap = true, silent = true })
 set("n", "<leader>ci", "")
 
 -- buffers
