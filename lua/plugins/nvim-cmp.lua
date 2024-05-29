@@ -11,14 +11,16 @@ return {
       return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
     end
 
-    local cmp = require("cmp")
-
     -- prevents first completion item from being automatically selected
     -- opts.preselect = cmp.PreselectMode.None
     -- opts.completion = {
     --   completeopt = "menu,menuone,noinsert,noselect",
     -- }
 
+    local cmp = require("cmp")
+
+    ---@diagnostic disable-next-line: missing-fields
+    opts.experimental.ghost_text = {}
     opts.mapping = vim.tbl_extend("force", opts.mapping, {
       ["<Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then

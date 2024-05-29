@@ -35,6 +35,21 @@ return {
       require("telescope").load_extension("fzf")
     end,
   },
+  opts = {
+    defaults = {
+      path_display = { "filename_first" },
+      layout_strategy = "vertical",
+      sorting_strategy = "ascending",
+      layout_config = {
+        vertical = {
+          align = "right",
+          prompt_position = "top",
+          mirror = true,
+          preview_height = 0.7,
+        },
+      },
+    },
+  },
   keys = {
     {
       "<leader>s.",

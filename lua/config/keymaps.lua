@@ -2,13 +2,13 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 local set = vim.keymap.set
-local del = vim.keymap.del
+local del = vim.keymap.del -- unmap, used to override default keymaps set by lazyvim
+
 
 set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 set("n", "<C-d>", "15j", { noremap = true, silent = true })
 set("n", "<C-u>", "15k", { noremap = true, silent = true })
-set("n", "<leader>ci", "")
 
 -- buffers
 set("n", "<A-w>", LazyVim.ui.bufremove, { noremap = true, silent = true })
