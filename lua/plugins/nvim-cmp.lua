@@ -20,7 +20,8 @@ return {
     local cmp = require("cmp")
 
     ---@diagnostic disable-next-line: missing-fields
-    opts.experimental.ghost_text = {}
+    opts.experimental.ghost_text = {} -- disable ghost text for autocompletion
+
     opts.mapping = vim.tbl_extend("force", opts.mapping, {
       ["<Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then

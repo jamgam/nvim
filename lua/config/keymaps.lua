@@ -4,7 +4,6 @@
 local set = vim.keymap.set
 local del = vim.keymap.del -- unmap, used to override default keymaps set by lazyvim
 
-
 set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 set("n", "<C-d>", "15j", { noremap = true, silent = true })
@@ -25,5 +24,12 @@ set("n", "<A-7>", ":BufferLineGoToBuffer 7<CR>", { noremap = true, silent = true
 set("n", "<A-8>", ":BufferLineGoToBuffer 8<CR>", { noremap = true, silent = true })
 set("n", "<A-9>", ":BufferLineGoToBuffer 9<CR>", { noremap = true, silent = true })
 
+-- easy commenting
+vim.api.nvim_set_keymap("n", "<A-/>", "gcc", {})
+vim.api.nvim_set_keymap("v", "<A-/>", "gc", {})
+
+-- fix weird behavior with shift + arrow keys
 set("", "<S-Down>", "<Down>")
 set("", "<S-Up>", "<Up>")
+set("", "<S-Left>", "<Left>")
+set("", "<S-Right>", "<Right>")
