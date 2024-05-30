@@ -1,11 +1,12 @@
 return {
   "sainnhe/sonokai",
-  { "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = { style = "storm" } },
+  { "folke/tokyonight.nvim", lazy = false, opts = { style = "storm" } },
   "sainnhe/everforest",
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight-storm",
+      colorscheme = "catppuccin-frappe",
     },
   },
 }
