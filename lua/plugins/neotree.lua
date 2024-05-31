@@ -1,7 +1,7 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   keys = {
-    { "\\", ":Neotree reveal<CR>", { desc = "NeoTree reveal", silent = true } },
+    { "\\", "<cmd>Neotree reveal<cr>", { desc = "NeoTree reveal", silent = true } },
   },
   opts = {
     filesystem = {

@@ -23,6 +23,11 @@ return {
         },
       },
     },
+    keys = {
+      "<leader>.",
+      require("telescope.builtin").lsp_dynamic_workspace_symbols,
+      desc = "LSP Dynamic Workspace Symbols",
+    },
   },
 }
 

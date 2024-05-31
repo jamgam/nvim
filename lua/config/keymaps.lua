@@ -2,6 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 local set = vim.keymap.set
+---@diagnostic disable-next-line: unused-local
 local del = vim.keymap.del -- unmap, used to override default keymaps set by lazyvim
 
 -- vertical movement
@@ -44,7 +45,7 @@ set("n", "<A-9>", ":BufferLineGoToBuffer 9<CR>", { noremap = true, silent = true
 set("n", "<A-/>", "gcc", { remap = true })
 set("v", "<A-/>", "gc", { remap = true })
 
--- fix weird behavior with shift + arrow keys
+-- override shift + arrow keys
 set("", "<S-Down>", "<Down>")
 set("", "<S-Up>", "<Up>")
 set("", "<S-Left>", "<Left>")
@@ -61,15 +62,5 @@ set("n", "<C-k>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
 set("n", "<C-j>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
 set("n", "<C-h>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
 set("n", "<C-l>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
-
 -- replace
 set("v", "<leader>rr", ':s/<c-r>"//g<Left><Left>', { desc = "Replace" })
-
--- saner behavior of n and N, n always serach forward and N always search backward
--- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
-set("n", "n", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "Next Search Result" })
-set("x", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
-set("o", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
-set("n", "N", "'nN'[v:searchforward].'zv'", { expr = true, desc = "Prev Search Result" })
-set("x", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
-set("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
