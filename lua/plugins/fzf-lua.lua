@@ -4,6 +4,7 @@ return {
   config = function()
     local set = vim.keymap.set
     local fzf = require("fzf-lua")
+    local actions = fzf.actions
     set("n", "<leader>fp", fzf.builtin, { desc = "Fzf Builtin Pickers" })
     set("n", "<leader>ff", fzf.files, { desc = "Fzf Files" })
     set("n", "<leader>fs", fzf.lsp_live_workspace_symbols, { desc = "Fzf Workspace Symbols" })
@@ -42,18 +43,26 @@ return {
           ["ctrl-u"] = "preview-page-up",
           ["ctrl-q"] = "select-all+accept",
         },
-        actions = {
-          buffer = {
-            ["ctrl-|"] = "vsplit",
-            ["ctl-_"] = "hsplit",
-            ["ctrl-t"] = "tabedit",
-          },
-          files = {
-            ["ctrl-v"] = "vsplit",
-            ["ctrl-s"] = "hsplit",
-            ["ctrl-t"] = "tabedit",
-          },
+      },
+      actions = {
+        files = {
+          ["default"] = actions.file_edit_or_qf,
+          ["ctrl-x"] = actions.file_split,
+          ["ctrl-w"] = actions.file_vsplit,
+          ["ctrl-t"] = actions.file_tabedit,
+          ["alt-q"] = actions.file_sel_to_qf,
+          ["alt-l"] = actions.file_sel_to_ll,
         },
+        buffers = {
+          ["default"] = actions.buf_edit,
+          ["ctrl-x"] = actions.buf_split,
+          ["ctrl-w"] = actions.buf_vsplit,
+          ["ctrl-t"] = actions.buf_tabedit,
+        },
+      },
+      buffers = {
+        keymap = { builtin = { ["<C-d>"] = false } },
+        actions = { ["ctrl-x"] = false, ["ctrl-d"] = { actions.buf_del, actions.resume } },
       },
     })
   end,

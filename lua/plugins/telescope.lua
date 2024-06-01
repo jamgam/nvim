@@ -1,3 +1,4 @@
+local builtin = require("telescope.builtin")
 return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
@@ -14,21 +15,25 @@ return {
     { "<leader>fF", false },
     { "<leader>fR", false },
     { "<leader>fr", false },
-    { "<leaders><leader>", false },
+    { "<leader><leader>", false },
     { "<leader>/", false },
+    { "<leader>sf", builtin.find_files, { desc = "Search Files" } },
+    { "<leader>sp", builtin.builtin, { desc = "Search Pickers" } },
+    { "<leader>ss", builtin.lsp_dynamic_workspace_symbols, { desc = "Search Workspace Symbols" } },
+    { "<ledaer>sS", builtin.lsp_document_symbols, { desc = "Search Docment Symbols" } },
   },
   opts = {
     defaults = {
       path_display = { "filename_first" },
-      layout_strategy = "vertical",
+      layout_strategy = "flex",
       sorting_strategy = "ascending",
+      results_width = 0.3,
       layout_config = {
-        vertical = {
-          align = "right",
-          prompt_position = "top",
-          mirror = true,
-          preview_height = 0.7,
-        },
+        prompt_position = "top",
+      },
+      fzf = {
+        fuzzy = true,
+        override_generic_sorter = true,
       },
     },
   },
