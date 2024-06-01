@@ -1,5 +1,3 @@
-local default = require("lazyvim.config").get_kind_filter()
-
 return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
@@ -8,6 +6,14 @@ return {
     config = function()
       require("telescope").load_extension("fzf")
     end,
+  },
+  keys = {
+    { "<leader>ff", false },
+    { "<leader>fg", false },
+    { "<leader>ff", false },
+    { "<leader>fF", false },
+    { "<leader>fR", false },
+    { "<leader>fr", false },
   },
   opts = {
     defaults = {
@@ -22,11 +28,6 @@ return {
           preview_height = 0.7,
         },
       },
-    },
-    keys = {
-      "<leader>.",
-      require("telescope.builtin").lsp_dynamic_workspace_symbols,
-      desc = "LSP Dynamic Workspace Symbols",
     },
   },
 }

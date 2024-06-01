@@ -2,8 +2,9 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 local set = vim.keymap.set
----@diagnostic disable-next-line: unused-local
 local del = vim.keymap.del -- unmap, used to override default keymaps set by lazyvim
+
+del("t", "<esc><esc>")
 
 -- vertical movement
 set("n", "<C-d>", "15j", { desc = "Move down 15 lines" })
