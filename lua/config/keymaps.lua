@@ -4,7 +4,7 @@
 local set = vim.keymap.set
 local del = vim.keymap.del -- unmap, used to override default keymaps set by lazyvim
 
-del("t", "<esc><esc>")
+del("t", "<esc><esc>") -- makes using fzf annoying since it uses terminal
 
 -- vertical movement
 set("n", "<C-d>", "15j", { desc = "Move down 15 lines" })
@@ -33,15 +33,6 @@ set("n", "<leader>wq", LazyVim.ui.bufremove)
 set("n", "<S-Tab>", ":bprev<CR>", { noremap = true, silent = true })
 set("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = true })
 set("n", "<A-s>", ":w<CR>", { noremap = true, silent = true })
-set("n", "<A-1>", "<cmd>BufferLineGoToBuffer 1<CR>")
-set("n", "<A-2>", "<cmd>BufferLineGoToBuffer 2<CR>")
-set("n", "<A-3>", "<cmd>BufferLineGoToBuffer 3<CR>")
-set("n", "<A-4>", "<cmd>BufferLineGoToBuffer 4<CR>")
-set("n", "<A-5>", "<cmd>BufferLineGoToBuffer 5<CR>")
-set("n", "<A-6>", "<cmd>BufferLineGoToBuffer 6<CR>")
-set("n", "<A-7>", "<cmd>BufferLineGoToBuffer 7<CR>")
-set("n", "<A-8>", "<cmd>BufferLineGoToBuffer 8<CR>")
-set("n", "<A-9>", "<cmd>BufferLineGoToBuffer 9<CR>")
 
 -- easy commenting
 set("n", "<A-/>", "gcc", { remap = true })
