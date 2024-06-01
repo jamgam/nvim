@@ -14,6 +14,8 @@ return {
     { "<leader>fF", false },
     { "<leader>fR", false },
     { "<leader>fr", false },
+    { "<leaders><leader>", false },
+    { "<leader>/", false },
   },
   opts = {
     defaults = {

@@ -12,6 +12,8 @@ return {
     set("n", "<leader>fk", fzf.keymaps, { desc = "Fzf Keys" })
     set("n", "<leader>fa", fzf.lsp_code_actions, { desc = "Fzf Code Actions" })
     set("n", "<leader>fd", fzf.diagnostics_workspace, { desc = "Fzf Diagnostics Workspace" })
+    set("n", "<leader><leader>", fzf.files, { desc = "Fzf Files" })
+    set("n", "<leader>/", fzf.live_grep_native, { desc = "Fzf Live Grep" })
     require("fzf-lua").setup({
       keymap = {
         builtin = {
