@@ -11,4 +11,3 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.scrolloff = 10
 vim.opt.sidescrolloff = 0
 vim.opt.wrap = true
--- opt.formatoptions = "jnql" -- tcqj

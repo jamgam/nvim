@@ -25,11 +25,11 @@ return {
   opts = {
     defaults = {
       path_display = { "filename_first" },
-      layout_strategy = "flex",
+      layout_strategy = "horizontal",
       sorting_strategy = "ascending",
-      results_width = 0.3,
       layout_config = {
         prompt_position = "top",
+        preview_width = 0.6,
       },
       fzf = {
         fuzzy = true,
