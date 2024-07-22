@@ -29,7 +29,9 @@ return {
       sorting_strategy = "ascending",
       layout_config = {
         prompt_position = "top",
-        preview_width = 0.6,
+        horizontal = {
+          preview_width = 0.6,
+        },
       },
       fzf = {
         fuzzy = true,

@@ -6,6 +6,8 @@ local del = vim.keymap.del -- unmap, used to override default keymaps set by laz
 
 del("t", "<esc><esc>") -- makes using fzf annoying since it uses terminal
 
+set("i", "jj", "<esc>", { desc = "Exit insert mode" })
+
 -- vertical movement
 set("n", "<C-d>", "<C-d>zz", { desc = "Move down 15 lines" })
 set("n", "<C-u>", "<C-u>zz", { desc = "Move up 15 lines" })
