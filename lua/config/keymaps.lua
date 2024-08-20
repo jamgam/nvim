@@ -4,7 +4,7 @@
 local set = vim.keymap.set
 local del = vim.keymap.del -- unmap, used to override default keymaps set by lazyvim
 
-del("t", "<esc><esc>") -- makes using fzf annoying since it uses terminal
+-- del("t", "<esc><esc>") -- makes using fzf annoying since it uses terminal
 
 set("i", "jj", "<esc>", { desc = "Exit insert mode" })
 
