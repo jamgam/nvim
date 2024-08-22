@@ -13,3 +13,4 @@ vim.opt.sidescrolloff = 0
 vim.opt.wrap = true
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.filetype.add({ extension = { templ = "templ" } })

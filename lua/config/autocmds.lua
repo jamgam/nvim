@@ -14,4 +14,11 @@
 --     vim.opt.formatoptions:remove({ "c", "r", "o" })
 --   end,
 --   desc = "Disable New Line Comment",
--- })  
+-- })
+--
+--
+if vim.fn.filereadable(".nvim.lua") == 1 then
+  vim.cmd("source .nvim.lua")
+elseif vim.fn.filereadable(".nvimrc") == 1 then
+  vim.cmd("source .nvimrc")
+end
