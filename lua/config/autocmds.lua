@@ -28,7 +28,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "*5x6/keymaps/jamgam/keymap.c", -- this is a pattern to match the filepath of whatever board you wish to target
   callback = function()
     require("qmk").setup({
-      auto_format_pattern = "*5x6/keymaps/jamgam/keymap.c",
+      auto_format_pattern = nil,
       name = "LAYOUT_5x6",
       comment_preview = {},
       layout = {
@@ -40,21 +40,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
         "_ _ _ _ x x _ _ _ _ _ x x _ _ _ _",
         "_ _ _ _ x x _ _ _ _ _ x x _ _ _ _",
         "_ _ _ _ x x _ _ _ _ _ x x _ _ _ _",
-      },
-    })
-  end,
-})
-
-vim.api.nvim_create_autocmd("BufEnter", {
-  desc = "Format overlap keymap",
-  group = group,
-  pattern = "*overlap/keymap.c",
-  callback = function()
-    require("qmk").setup({
-      name = "LAYOUT_preonic_grid",
-      auto_format_pattern = "*overlap/keymap.c",
-      layout = {
-        "x x x x x",
       },
     })
   end,

@@ -6,6 +6,8 @@ local del = vim.keymap.del -- unmap, used to override default keymaps set by laz
 
 -- del("t", "<esc><esc>") -- makes using fzf annoying since it uses terminal
 
+set({ "n", "i", "v" }, "<C-q>", "<Cmd>wa<CR><Cmd>qa<CR>")
+
 set("i", "jj", "<esc>", { desc = "Exit insert mode" })
 
 -- vertical movement
@@ -61,5 +63,6 @@ set("n", "<C-k>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
 set("n", "<C-j>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
 set("n", "<C-h>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
 set("n", "<C-l>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
+
 -- replace
 set("v", "<leader>rr", ':s/<c-r>"//g<Left><Left>', { desc = "Replace" })
