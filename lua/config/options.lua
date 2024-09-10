@@ -14,3 +14,26 @@ vim.opt.wrap = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.filetype.add({ extension = { templ = "templ" } })
+
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.bo.softtabstop = 2
+
+-- If your using nvim on wsl2 env.
+if vim.fn.has("wsl") > 0 then
+  vim.cmd([[
+    let g:clipboard = {
+            \   'name': 'WslClipboard',
+            \   'copy': {
+            \      '+': 'clip.exe',
+            \      '*': 'clip.exe',
+            \    },
+            \   'paste': {
+            \      '+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+            \      '*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+            \   },
+            \   'cache_enabled': 0,
+            \ }
+    ]])
+end

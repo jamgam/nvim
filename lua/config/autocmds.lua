@@ -16,9 +16,46 @@
 --   desc = "Disable New Line Comment",
 -- })
 --
---
 if vim.fn.filereadable(".nvim.lua") == 1 then
   vim.cmd("source .nvim.lua")
 elseif vim.fn.filereadable(".nvimrc") == 1 then
   vim.cmd("source .nvimrc")
 end
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  desc = "Format simple keymap",
+  group = group,
+  pattern = "*5x6/keymaps/jamgam/keymap.c", -- this is a pattern to match the filepath of whatever board you wish to target
+  callback = function()
+    require("qmk").setup({
+      auto_format_pattern = "*5x6/keymaps/jamgam/keymap.c",
+      name = "LAYOUT_5x6",
+      comment_preview = {},
+      layout = {
+        "x x x x x x _ _ _ _ _ x x x x x x",
+        "x x x x x x _ _ _ _ _ x x x x x x",
+        "x x x x x x _ _ _ _ _ x x x x x x",
+        "x x x x x x _ _ _ _ _ x x x x x x",
+        "_ _ x x _ _ _ _ _ _ _ _ _ x x _ _",
+        "_ _ _ _ x x _ _ _ _ _ x x _ _ _ _",
+        "_ _ _ _ x x _ _ _ _ _ x x _ _ _ _",
+        "_ _ _ _ x x _ _ _ _ _ x x _ _ _ _",
+      },
+    })
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  desc = "Format overlap keymap",
+  group = group,
+  pattern = "*overlap/keymap.c",
+  callback = function()
+    require("qmk").setup({
+      name = "LAYOUT_preonic_grid",
+      auto_format_pattern = "*overlap/keymap.c",
+      layout = {
+        "x x x x x",
+      },
+    })
+  end,
+})
