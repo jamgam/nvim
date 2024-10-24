@@ -6,6 +6,15 @@ return {
     { "<leader>fE>", false },
   },
   opts = {
+    event_handlers = {
+
+      {
+        event = "file_open_requested",
+        handler = function()
+          vim.cmd("Neotree close")
+        end,
+      },
+    },
     filesystem = {
       window = {
         mappings = {

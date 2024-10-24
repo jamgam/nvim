@@ -66,3 +66,6 @@ set("n", "<C-l>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width
 
 -- replace
 set("v", "<leader>rr", ':s/<c-r>"//g<Left><Left>', { desc = "Replace" })
+
+set("i", "<C-H>", "<C-W>")
+set("i", "<A-BS>", "<C-W>")

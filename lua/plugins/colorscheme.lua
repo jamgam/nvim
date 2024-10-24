@@ -1,12 +1,12 @@
 return {
-  "sainnhe/sonokai",
   { "folke/tokyonight.nvim", lazy = false, opts = { style = "storm" } },
-  "sainnhe/everforest",
   { "catppuccin/nvim", name = "catppuccin" },
+  { "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
   {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "catppuccin-frappe",
+      -- colorscheme = "gruvbox",
     },
   },
 }

@@ -44,3 +44,23 @@ vim.api.nvim_create_autocmd("BufEnter", {
     })
   end,
 })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  desc = "Format 4x6 keymap",
+  group = group,
+  pattern = "*4x6_3/keymaps/jamgam/keymap.c", -- this is a pattern to match the filepath of whatever board you wish to target
+  callback = function()
+    require("qmk").setup({
+      auto_format_pattern = nil,
+      name = "LAYOUT",
+      comment_preview = {},
+      layout = {
+        "x x x x x x _ x x x x x x",
+        "x x x x x x _ x x x x x x",
+        "x x x x x x _ x x x x x x",
+        "_ _ x x _ _ _ _ _ x x _ _",
+        "_ _ _ x x x _ x x x _ _ _",
+      },
+    })
+  end,
+})
