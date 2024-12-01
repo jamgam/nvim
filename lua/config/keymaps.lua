@@ -69,3 +69,6 @@ set("v", "<leader>rr", ':s/<c-r>"//g<Left><Left>', { desc = "Replace" })
 
 set("i", "<C-H>", "<C-W>")
 set("i", "<A-BS>", "<C-W>")
+
+set({ "n", "v" }, "y", '"+y', { remap = true })
+set({ "n", "v" }, "<leader>y", '"+y', { remap = true })

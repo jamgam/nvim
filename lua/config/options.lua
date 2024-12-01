@@ -7,7 +7,7 @@ vim.g.VM_leader = "<leader>\\"
 vim.g.have_nerd_font = true
 vim.g.minipairs_disable = true
 
--- vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = ""
 vim.opt.scrolloff = 10
 vim.opt.sidescrolloff = 0
 vim.opt.wrap = true

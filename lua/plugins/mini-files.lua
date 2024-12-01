@@ -4,7 +4,7 @@ return {
   opts = {
     mappings = {
       go_in = "<right>",
-      go_in_plus = "<S-right>",
+      go_in_plus = "<CR>",
       go_out = "<left>",
       go_out_plus = "<S-left>",
     },
