@@ -32,8 +32,8 @@ set("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
 set("n", "*", "*N", { desc = "Search word under cursor staying on word", remap = true })
 
 -- buffers
-set("n", "<A-w>", LazyVim.ui.bufremove)
-set("n", "<leader>wq", LazyVim.ui.bufremove)
+set("n", "<A-w>", "<space>bd", { desc = "Close buffer", remap = true })
+set("n", "<leader>wq", "<space>bd", { desc = "Close buffer", remap = true })
 set("n", "<S-Tab>", ":bprev<CR>", { noremap = true, silent = true })
 set("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = true })
 set("n", "<A-s>", ":wa<CR>", { noremap = true, silent = true })
