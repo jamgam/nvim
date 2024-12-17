@@ -20,6 +20,8 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.bo.softtabstop = 2
 
+vim.g.snacks_animate = false
+
 -- If your using nvim on wsl2 env.
 if vim.fn.has("wsl") > 0 then
   vim.cmd([[
