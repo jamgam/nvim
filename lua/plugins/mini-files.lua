@@ -10,7 +10,7 @@ return {
       go_out_plus = "<S-left>",
       close = "<esc>",
     },
-    options = { use_as_default_explorer = true },
+    options = { use_as_default_explorer = false },
     windows = {
       width_preview = 80,
     },
