@@ -1,6 +1,7 @@
 return {
   "echasnovski/mini.files",
   version = false,
+  lazy = false,
   opts = {
     mappings = {
       go_in = "<right>",

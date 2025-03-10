@@ -16,6 +16,7 @@ return {
       },
     },
     filesystem = {
+      hijack_netrw_behavior = false,
       window = {
         mappings = {
           ["\\"] = "close_window",
