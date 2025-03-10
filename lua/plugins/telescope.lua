@@ -1,6 +1,6 @@
--- if true then
---   return {}
--- end
+if true then
+  return {}
+end
 local builtin = require("telescope.builtin")
 return {
   "nvim-telescope/telescope.nvim",
