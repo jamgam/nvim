@@ -8,6 +8,10 @@ local del = vim.keymap.del -- unmap, used to override default keymaps set by laz
 
 set({ "n", "i", "v" }, "<C-q>", "<Cmd>wa<CR><Cmd>qa<CR>")
 
+set("n", "<C-a>", "ggVG", { noremap = true })
+set("v", "<C-a>", "<Esc>ggVG", { noremap = true })
+set("i", "<C-a>", "<Esc>ggVG", { noremap = true })
+
 set("i", "jj", "<esc>", { desc = "Exit insert mode" })
 
 -- vertical movement
@@ -75,3 +79,4 @@ set("i", "<C-H>", "<C-W>")
 set("i", "<A-BS>", "<C-W>")
 
 set({ "n", "v" }, "<leader>y", '"+y', { remap = true })
+set({ "n", "v" }, "<C-c>", '"+y', { remap = true })

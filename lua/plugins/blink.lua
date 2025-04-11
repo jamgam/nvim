@@ -14,6 +14,7 @@ return {
         end,
       },
       ["<Tab>"] = {},
+      ["<CR>"] = { "accept", "fallback" },
     }
 
     opts.completion = {
