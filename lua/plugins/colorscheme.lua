@@ -1,8 +1,8 @@
 return {
-  "sainnhe/sonokai",
-  { "folke/tokyonight.nvim", lazy = false, opts = { style = "storm" } },
-  { "catppuccin/nvim", name = "catppuccin" },
-  { "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
+  -- "sainnhe/sonokai",
+  -- { "folke/tokyonight.nvim", lazy = false, opts = { style = "storm" } },
+  -- { "catppuccin/nvim", name = "catppuccin" },
+  -- { "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
   {
     "0xstepit/flow.nvim",
     lazy = false,
