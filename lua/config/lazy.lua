@@ -16,8 +16,6 @@ end
 local extras = {
   -- add LazyVim and import its plugins
   { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-  -- import/override with your plugins
-  { import = "plugins" },
 }
 
 -- Conditionally add copilot extras
@@ -25,6 +23,9 @@ if should_enable_copilot() then
   table.insert(extras, { import = "lazyvim.plugins.extras.ai.copilot" })
   table.insert(extras, { import = "lazyvim.plugins.extras.ai.copilot-chat" })
 end
+
+-- import/override with your plugins
+table.insert(extras, { import = "plugins" })
 
 require("lazy").setup({
   spec = extras,

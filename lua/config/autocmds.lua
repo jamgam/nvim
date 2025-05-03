@@ -102,3 +102,22 @@ vim.api.nvim_create_autocmd("BufEnter", {
     })
   end,
 })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  desc = "Format 3x7 keymap",
+  group = group,
+  pattern = "anywhy_flake.keymap", -- this is a pattern to match the filepath of whatever board you wish to target
+  callback = function()
+    require("qmk").setup({
+      auto_format_pattern = nil,
+      name = "LAYOUT",
+      comment_preview = {},
+      layout = {
+        "x x x x x x _ _ _ x x x x x x",
+        "x x x x x x _ _ _ x x x x x x",
+        "x x x x x x _ _ _ x x x x x x",
+        "_ X x x x x x _ x x x x x x _",
+      },
+    })
+  end,
+})
