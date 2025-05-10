@@ -1,12 +1,18 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
+
+if vim.g.vscode then
+  require("vs.keymaps")
+  return
+end
+
 local set = vim.keymap.set
 local del = vim.keymap.del -- unmap, used to override default keymaps set by lazyvim
 
--- del("t", "<esc><esc>") -- makes using fzf annoying since it uses terminal
-
 set({ "n", "i", "v" }, "<C-q>", "<Cmd>wa<CR><Cmd>qa<CR>")
+
+set({ "n" }, "\\", "<leader>e", { remap = true })
 
 set("n", "<C-a>", "ggVG", { noremap = true })
 set("v", "<C-a>", "<Esc>ggVG", { noremap = true })
