@@ -133,5 +133,10 @@
   ],
   "notebook.showFoldingControls": "always",
   "editor.showFoldingControls": "always",
-  "workbench.editor.highlightModifiedTabs": true
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.showTabs": "none",
+  "chat.commandCenter.enabled": false,
+  "window.commandCenter": false,
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingQuotes": "never"
 }

@@ -70,6 +70,7 @@ set("n", "<leader>bp", function()
   local commandId = isPinned and "workbench.action.unpinEditor" or "workbench.action.pinEditor"
   action(commandId)()
 end)
+set("n", "<leader>fb", action("workbench.files.action.focusOpenEditorsView"))
 
 -- diagnostics
 set("n", "[d", action("editor.action.marker.next"))
@@ -91,8 +92,14 @@ set("n", "gi", action("editor.action.goToImplementation"))
 
 -- find / search
 set("n", "<leader>sk", action("workbench.action.openGlobalKeybindings"))
+set("n", "<leader>sK", action("workbench.action.openGlobalKeybindingsFile"))
 set("n", "<leader>/", action("search.action.openNewEditor"))
 set("n", "<leader>.", action("workbench.action.quickOpen"))
+set("n", "<leader>,", call("workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"))
+set("n", "<leader>ss", action("workbench.action.showAllSymbols"))
+
+-- restart neovim
+set("n", "<leader>rr>", action("vscode-neovim.restart"))
 
 --debugging with notify
 set("n", "<leader>zz", function()
