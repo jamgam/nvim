@@ -73,13 +73,16 @@ end)
 set("n", "<leader>fb", action("workbench.files.action.focusOpenEditorsView"))
 
 -- diagnostics
-set("n", "[d", action("editor.action.marker.next"))
-set("n", "]d", action("editor.action.marker.previous"))
+set("n", "]d", action("editor.action.marker.next"))
+set("n", "[d", action("editor.action.marker.previous"))
+set("n", "<leader>cd", action("editor.action.marker.next"))
 
 -- git
 set("n", "[h", action("editor.action.dirtydiff.previous"))
 set("n", "]h", action("editor.action.dirtydiff.next"))
 set("n", "<leader>ghp", call("editor.action.dirtydiff.next"))
+set("n", "<leader>ghb", call("gitlens.toggleFileBlame"))
+set("n", "<leader>ghf", call("git.viewFileHistory"))
 set({ "n", "v" }, "<leader>ghr", action("git.revertSelectedRanges"))
 
 -- code

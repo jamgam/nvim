@@ -384,22 +384,14 @@
   },
   {
     "command": "vscode-neovim.send",
-    // Invoke the binding with this key sequence.
     "key": "ctrl+d",
-    // Don't activate during insert mode.
-    // Docs for "when": https://code.visualstudio.com/api/references/when-clause-contexts
     "when": "editorTextFocus && neovim.mode != insert",
-    // Send this input to Neovim.
     "args": "<c-d>"
   },
   {
     "command": "vscode-neovim.send",
-    // Invoke the binding with this key sequence.
     "key": "ctrl+u",
-    // Don't activate during insert mode.
-    // Docs for "when": https://code.visualstudio.com/api/references/when-clause-contexts
     "when": "editorTextFocus && neovim.mode != insert",
-    // Send this input to Neovim.
     "args": "<c-u>"
   },
   {
