@@ -32,8 +32,8 @@ set({ "s", "v" }, "]", "gsa]", { remap = true })
 set({ "s", "v" }, "[", "gsa[", { remap = true })
 set({ "s", "v" }, "}", "gsa}", { remap = true })
 set({ "s", "v" }, "{", "gsa{", { remap = true })
-set({ "s", "v" }, ">", "gsa>", { remap = true })
-set({ "s", "v" }, "<", "gsa<", { remap = true })
+-- set({ "s", "v" }, ">", "gsa>", { remap = true })
+-- set({ "s", "v" }, "<", "gsa<", { remap = true })
 
 -- vertical movement
 set({ "n", "i", "v" }, "<C-d>", "20j", { desc = "Move down 20 lines" })
