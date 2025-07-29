@@ -87,8 +87,10 @@ set({ "n", "v" }, "<leader>ghr", action("git.revertSelectedRanges"))
 
 -- code
 set("n", "<leader>ca", action("editor.action.quickFix"))
+set("n", "<leader>cA", action("editor.action.sourceAction"))
 set("n", "<leader>cr", action("editor.action.rename"))
-set("n", "<leader>o", action("editor.action.showContextMenu"))
+set({ "n", "v" }, "<leader>o", action("editor.action.showContextMenu"))
+set({ "n" }, "gy", action("editor.action.goToTypeDefinition"))
 
 set("n", "gr", action("editor.action.goToReferences"))
 set("n", "gi", action("editor.action.goToImplementation"))
