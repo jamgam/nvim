@@ -84,6 +84,7 @@ set("n", "<leader>ghp", call("editor.action.dirtydiff.next"))
 set("n", "<leader>ghb", call("gitlens.toggleFileBlame"))
 set("n", "<leader>ghf", call("git.viewFileHistory"))
 set({ "n", "v" }, "<leader>ghr", action("git.revertSelectedRanges"))
+set("n", "<leader>gs", call("workbench.scm.focus"))
 
 -- code
 set("n", "<leader>ca", action("editor.action.quickFix"))
